@@ -1,16 +1,13 @@
-import {Button} from "@/components/ui/button"
-
+import { Suspense } from "react";
+import View from "./routes/View";
 function App() {
-
-  const handleClick = () => {
-    console.log("Button clicked")
-  }
-  
   return (
-    <div className="flex min-h-svh flex-col items-center justify-center">
-      <Button className="cursor-pointer" onClick={handleClick}>Click me</Button>
-    </div>
-  )
+    <>
+      <Suspense>
+        <View />
+      </Suspense>
+    </>
+  );
 }
 
 export default App;
